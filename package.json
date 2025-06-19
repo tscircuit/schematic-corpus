@@ -1,0 +1,21 @@
+{
+  "name": "@tscircuit/schematic-corpus",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "tsci dev",
+    "build": "tsci build",
+    "snapshot": "tsci snapshot",
+    "snapshot:update": "tsci snapshot --update",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
+    "@types/bun": "latest",
+    "bun-match-svg": "^0.0.11",
+    "tscircuit": "^0.0.499"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
