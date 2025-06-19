@@ -1,3 +1,5 @@
+import { sel } from "tscircuit"
+
 export default () => (
   <board routingDisabled>
     <chip
