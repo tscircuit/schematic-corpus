@@ -5,7 +5,7 @@
     "@biomejs/biome": "^2.0.0",
     "@types/bun": "latest",
     "bun-match-svg": "^0.0.11",
-    "tscircuit": "^0.0.499"
+    "tscircuit": "^0.0.500"
   },
   "peerDependencies": {
     "typescript": "^5"
@@ -13,8 +13,8 @@
   "scripts": {
     "start": "tsci dev",
     "build": "tsci build",
-    "snapshot": "tsci snapshot",
-    "snapshot:update": "tsci snapshot --update",
+    "snapshot": "tsci snapshot --schematic-only",
+    "snapshot:update": "tsci snapshot --update --schematic-only",
     "format": "biome format --write ."
   },
   "type": "module"
