@@ -10,6 +10,7 @@
         "@biomejs/biome": "^2.0.0",
         "@types/bun": "latest",
         "bun-match-svg": "^0.0.11",
+        "circuit-json-to-bpc": "^0.0.1",
         "tscircuit": "^0.0.501",
       },
       "peerDependencies": {
@@ -135,6 +136,8 @@
     "chownr": ["chownr@1.1.4", "", {}, "sha512-jJ0bqzaylmJtVnNgzTeSOs8DPavpbYgEr/b0YL8/2GO3xJEhInFmhKMUnEJQjZumK7KXGFhUy89PrsJWlakBVg=="],
 
     "circuit-json": ["circuit-json@0.0.212", "", { "dependencies": { "nanoid": "^5.0.7", "zod": "*" } }, "sha512-gA07y76H55nFjlckmDVl6ZWCqSu6alDMYIm0vWp7cK/NPXlObB90QHdGq/YLxL0CtDihqLD9ZTbTr2viIOMUfg=="],
+
+    "circuit-json-to-bpc": ["circuit-json-to-bpc@0.0.1", "", { "peerDependencies": { "circuit-json": "*", "typescript": "^5" } }, "sha512-RFyNh1N6Y9/q67kzLGsCbtMCkkpsj8NWAhHUYfkTGddDo29cQP7aPYxxLo4iuFV9Nhgtft/O2TSQaqWOMA3atw=="],
 
     "circuit-json-to-connectivity-map": ["circuit-json-to-connectivity-map@0.0.22", "", { "dependencies": { "@tscircuit/math-utils": "^0.0.9" }, "peerDependencies": { "typescript": "^5.0.0" } }, "sha512-HN8DiISjZZLTglGEkYNRpKeQ/DMG4dDo5j4Hck0UGSJbpux9aFwtJOGszMf06Inh/gu5oKBrpZJIeWxaNacKUg=="],
 
