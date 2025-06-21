@@ -8,6 +8,9 @@
     "circuit-json-to-bpc": "^0.0.1",
     "tscircuit": "^0.0.501"
   },
+  "exports": {
+    "bpc": "./dist/bundled-bpc-graphs.json"
+  },
   "peerDependencies": {
     "typescript": "^5"
   },
