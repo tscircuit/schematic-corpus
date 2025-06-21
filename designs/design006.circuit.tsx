@@ -1,43 +1,43 @@
 import { sel } from "tscircuit"
 
 const manualEdits = {
-  "schematic_placements": [
+  schematic_placements: [
     {
-      "selector": "R1",
-      "center": {
-        "x": 1.129032258064243,
-        "y": -1.1803519061580718
+      selector: "R1",
+      center: {
+        x: 1.129032258064243,
+        y: -1.1803519061580718,
       },
-      "relative_to": "group_center"
+      relative_to: "group_center",
     },
     {
-      "selector": "D4",
-      "center": {
-        "x": 2.143603176289351,
-        "y": -0.3371530106348991
+      selector: "D4",
+      center: {
+        x: 2.143603176289351,
+        y: -0.3371530106348991,
       },
-      "relative_to": "group_center"
+      relative_to: "group_center",
     },
     {
-      "selector": "C3",
-      "center": {
-        "x": 3.1203863667387717,
-        "y": -0.8184281491195643
+      selector: "C3",
+      center: {
+        x: 3.1203863667387717,
+        y: -0.8184281491195643,
       },
-      "relative_to": "group_center"
+      relative_to: "group_center",
     },
     {
-      "selector": "R5",
-      "center": {
-        "x": 1.203188228693789,
-        "y": -0.9935220999278451
+      selector: "R5",
+      center: {
+        x: 1.203188228693789,
+        y: -0.9935220999278451,
       },
-      "relative_to": "group_center"
-    }
-  ]
+      relative_to: "group_center",
+    },
+  ],
 }
 export default () => (
-   <board routingDisabled manualEdits={manualEdits}>
+  <board routingDisabled manualEdits={manualEdits}>
     <chip
       name="U1"
       schWidth={1}
