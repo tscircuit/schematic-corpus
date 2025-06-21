@@ -23,6 +23,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@tscircuit/core": "^0.0.503",
     "@tscircuit/props": "^0.0.238"
   }
 }
