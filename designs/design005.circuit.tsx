@@ -57,7 +57,6 @@ export default () => (
   <board routingDisabled manualEdits={manualEdits}>
     <chip
       name="U1"
-      footprint="soic8"
       schPinArrangement={{
         rightSide: {
           pins: [1, 2, 3, 4, 5, 6, 7],
@@ -67,7 +66,6 @@ export default () => (
     />
     <resistor
       name="R1"
-      footprint="0402"
       schRotation="90deg"
       resistance="5.1k"
       connections={{
@@ -76,7 +74,6 @@ export default () => (
     />
     <resistor
       name="R2"
-      footprint="0402"
       schRotation="90deg"
       resistance="5.1k"
       connections={{
@@ -85,7 +82,6 @@ export default () => (
     />
     <resistor
       name="R9"
-      footprint="0402"
       resistance="22"
       connections={{
         pin1: sel.U1.pin2,
@@ -93,7 +89,6 @@ export default () => (
     />
     <resistor
       name="R10"
-      footprint="0402"
       resistance="22"
       connections={{
         pin1: sel.U1.pin3,
