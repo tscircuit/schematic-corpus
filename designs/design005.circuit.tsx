@@ -45,8 +45,8 @@ const manualEdits = {
     {
       selector: "R2",
       center: {
-        x: 2.7457836656202916,
-        y: -1.567686294702973,
+        x: 2.4758831872906115,
+        y: -1.5621781216758368,
       },
       relative_to: "group_center",
     },
@@ -57,7 +57,7 @@ export default () => (
   <board routingDisabled manualEdits={manualEdits}>
     <chip
       name="U1"
-      footprint="soic7"
+      footprint="soic8"
       schPinArrangement={{
         rightSide: {
           pins: [1, 2, 3, 4, 5, 6, 7],
@@ -136,7 +136,7 @@ export default () => (
       anchorSide="top"
     />
     <netlabel
-      schX={2.746742282865982}
+      schX={2.4758831872906115}
       schY={-2.5}
       connectsTo={sel.R2.pin1}
       net="GND"
