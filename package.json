@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "tsci dev",
-    "build": "tsci build",
+    "build": "tsci build && bun run ./scripts/create-bpcs.ts",
     "snapshot": "tsci snapshot --schematic-only",
     "snapshot:update": "tsci snapshot --update --schematic-only",
     "format": "biome format --write ."
