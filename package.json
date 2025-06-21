@@ -19,7 +19,8 @@
     "build": "tsci build && bun run ./scripts/create-bpcs.ts",
     "snapshot": "tsci snapshot --schematic-only",
     "snapshot:update": "tsci snapshot --update --schematic-only",
-    "format": "biome format --write ."
+    "format": "biome format --write .",
+     "format:check": "biome format ."
   },
   "type": "module",
   "dependencies": {
