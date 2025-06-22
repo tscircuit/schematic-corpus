@@ -15,9 +15,6 @@
   "files": [
     "dist"
   ],
-  "exports": {
-    "bpc": "./dist/bundled-bpc-graphs.json"
-  },
   "peerDependencies": {
     "typescript": "^5"
   },
