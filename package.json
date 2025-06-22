@@ -1,6 +1,6 @@
 {
   "name": "@tscircuit/schematic-corpus",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "./dist/bundled-bpc-graphs.json",
   "devDependencies": {
     "@biomejs/biome": "^2.0.0",
