@@ -12,6 +12,9 @@
     "@tscircuit/core": "^0.0.507",
     "@tscircuit/props": "^0.0.239"
   },
+  "files": [
+    "dist"
+  ],
   "exports": {
     "bpc": "./dist/bundled-bpc-graphs.json"
   },
