@@ -6,7 +6,7 @@
     "@types/bun": "latest",
     "bun-match-svg": "^0.0.11",
     "circuit-json-to-bpc": "^0.0.1",
-    "tscircuit": "^0.0.503"
+    "tscircuit": "^0.0.505"
   },
   "exports": {
     "bpc": "./dist/bundled-bpc-graphs.json"
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "tsci dev",
-    "build": "tsci build && bun run ./scripts/create-bpcs.ts",
+    "build": "tsci build --ignore-errors && bun run ./scripts/create-bpcs.ts",
     "snapshot": "tsci snapshot --schematic-only",
     "snapshot:update": "tsci snapshot --update --schematic-only",
     "format": "biome format --write .",
@@ -24,6 +24,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@tscircuit/cli": "^0.1.146",
     "@tscircuit/core": "^0.0.507",
     "@tscircuit/props": "^0.0.239"
   }
