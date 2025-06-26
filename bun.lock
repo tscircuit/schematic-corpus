@@ -7,7 +7,7 @@
         "@biomejs/biome": "^2.0.0",
         "@tscircuit/cli": "^0.1.149",
         "@tscircuit/core": "^0.0.524",
-        "@tscircuit/props": "^0.0.246",
+        "@tscircuit/props": "^0.0.239",
         "@types/bun": "latest",
         "bun-match-svg": "^0.0.11",
         "circuit-json-to-bpc": "^0.0.3",
@@ -77,7 +77,7 @@
 
     "@tscircuit/mm": ["@tscircuit/mm@0.0.8", "", { "peerDependencies": { "typescript": "^5.0.0" } }, "sha512-nl7nxE7AhARbKuobflI0LUzoir7+wJyvwfPw6bzA/O0Q3YTcH3vBkU/Of+V/fp6ht+AofiCXj7YAH9E446138Q=="],
 
-    "@tscircuit/props": ["@tscircuit/props@0.0.246", "", { "peerDependencies": { "@tscircuit/layout": "*", "circuit-json": "*", "react": "*", "zod": "*" } }, "sha512-HHY51vYBVPMW8K3yx3DiyFIpFM5mJRU7g8/e6ZXz0Uhu1HIhtV2Z1HQrA0uwGXQKVXwE1Zez4NBqr+vGI8fLcg=="],
+    "@tscircuit/props": ["@tscircuit/props@0.0.239", "", { "peerDependencies": { "@tscircuit/layout": "*", "circuit-json": "*", "react": "*", "zod": "*" } }, "sha512-MRIK4RvkdNJ7u6PZPrk88bEEuDdeWftOGeH8kpCGRH/GMKlCC5O2PvV0wHwWgonndUZP8dnp+2Lw30R9pCRCQA=="],
 
     "@tscircuit/schematic-autolayout": ["@tscircuit/schematic-autolayout@0.0.6", "", { "dependencies": { "@tscircuit/soup-util": "^0.0.38", "transformation-matrix": "^2.16.1" } }, "sha512-34cQxtlSylBKyHkzaMBCynaWJgN9c/mWm7cz63StTYIafKmfFs383K8Xoc4QX8HXCvVrHYl1aK15onZua9MxeA=="],
 
