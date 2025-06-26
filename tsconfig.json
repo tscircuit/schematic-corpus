@@ -18,7 +18,7 @@
     "verbatimModuleSyntax": true,
     "noEmit": true,
 
-    "types": ["tscircuit"],
+    "types": ["tscircuit", "@types/bun"],
 
     // Best practices
     "strict": true,
