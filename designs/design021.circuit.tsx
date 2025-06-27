@@ -19,14 +19,14 @@ export default () => (
     />
     <netlabel
       schX={0.8}
-      schY={-4.5}
+      schY={-4.2}
       net="V5"
       anchorSide="bottom"
       connection="J1.pin4"
     />
     <netlabel
       schX={1.2}
-      schY={-4.5}
+      schY={-4.2}
       net="VDD"
       anchorSide="bottom"
       connectsTo={["J1.pin5", "J1.pin7"]}
