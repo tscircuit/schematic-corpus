@@ -5,7 +5,7 @@ export default () => (
     <netlabel
       schX={6.505}
       schY={1.6}
-      net="V3_3"
+      net="VCC"
       connection="R2.pin2"
       anchorSide="bottom"
     />
