@@ -2,6 +2,8 @@
 import { convertCircuitJsonToBpc } from "circuit-json-to-bpc"
 import { promises as fs } from "fs"
 import { join, dirname, basename } from "path"
+import { getGraphicsForBpcGraph } from "box-pin-color-graph"
+import { getSvgFromGraphicsObject } from "graphics-debug"
 
 async function getCircuitFiles(dir: string): Promise<string[]> {
   const entries = await fs.readdir(dir, { withFileTypes: true })
@@ -35,6 +37,12 @@ async function main() {
     const dir = dirname(file)
     const outPath = join(dir, "bpc.json")
     await fs.writeFile(outPath, JSON.stringify(bpc, null, 2))
+
+    const graphics = getGraphicsForBpcGraph(bpc)
+    const svg = getSvgFromGraphicsObject(graphics, { backgroundColor: "white" })
+    const svgPath = join(dir, "bpc.svg")
+    await fs.writeFile(svgPath, svg)
+
     const designName = basename(dir)
     bundled[designName] = bpc
   }
