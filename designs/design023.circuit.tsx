@@ -4,7 +4,7 @@ export default () => (
   <board width="10mm" height="10mm">
     <netlabel
       schX={6.505}
-      schY={1.6}
+      schY={1.3}
       net="VCC"
       connection="R2.pin2"
       anchorSide="bottom"
