@@ -4,7 +4,6 @@ export default () => (
   <board width="10mm" height="10mm">
     <jumper
       name="J1"
-      footprint="pinrow4"
       schPortArrangement={{
         rightSide: {
           direction: "top-to-bottom",
