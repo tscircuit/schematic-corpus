@@ -7,37 +7,115 @@ export default () => (
       schWidth={1}
       schPinArrangement={{
         rightSide: {
-          pins: [1, 2, 3, 4],
+          pins: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
           direction: "bottom-to-top",
         },
       }}
     />
     <netlabel
       schX={1.12}
-      schY={0.5}
+      schY={1.7}
       anchorSide="bottom"
-      net="V3_3"
-      connectsTo={sel.U1.pin2}
+      net="V_BATT"
+      connectsTo={sel.U1.pin12}
     />
     <netlabel
-      schX={1.3}
-      schY={0.32}
+      schX={1.55}
+      schY={1.2}
+      anchorSide="bottom"
+      net="V_USB"
+      connectsTo={sel.U1.pin10}
+    />
+    <netlabel
+      schX={1.1}
+      schY={0.9}
       anchorSide="left"
-      net="SCL"
+      net="EN"
+      connectsTo={sel.U1.pin11}
+    />
+    <netlabel
+      schX={1.1}
+      schY={0.5}
+      anchorSide="left"
+      net="D13"
+      connectsTo={sel.U1.pin9}
+    />
+    <netlabel
+      schX={1.1}
+      schY={0.3}
+      anchorSide="left"
+      net="D12"
+      connectsTo={sel.U1.pin8}
+    />
+    <netlabel
+      schX={1.1}
+      schY={0.1}
+      anchorSide="left"
+      net="D11"
+      connectsTo={sel.U1.pin7}
+    />
+    <netlabel
+      schX={1.1}
+      schY={-0.1}
+      anchorSide="left"
+      net="D10"
+      connectsTo={sel.U1.pin6}
+    />
+    <netlabel
+      schX={1.1}
+      schY={-0.3}
+      anchorSide="left"
+      net="D9"
+      connectsTo={sel.U1.pin5}
+    />
+    <netlabel
+      schX={1.1}
+      schY={-0.5}
+      anchorSide="left"
+      net="D6"
       connectsTo={sel.U1.pin4}
     />
     <netlabel
-      schX={1.3}
-      schY={0.1}
+      schX={1.1}
+      schY={-0.7}
       anchorSide="left"
-      net="SDA"
+      net="D5"
       connectsTo={sel.U1.pin3}
     />
     <netlabel
+      schX={1.1}
+      schY={-0.9}
+      anchorSide="left"
+      net="SCL"
+      connectsTo={sel.U1.pin2}
+    />
+    <netlabel
+      schX={1.1}
+      schY={0.904}
+      anchorSide="left"
+      net="EN"
+      connectsTo={sel.U1.pin11}
+    />
+    <netlabel
+      schX={1.1}
+      schY={0.904}
+      anchorSide="left"
+      net="EN"
+      connectsTo={sel.U1.pin11}
+    />
+    <netlabel
+      schX={1.1}
+      schY={0.904}
+      anchorSide="left"
+      net="EN"
+      connectsTo={sel.U1.pin11}
+    />
+
+    <netlabel
       schX={1.12}
-      schY={-0.5}
-      anchorSide="top"
-      net="GND"
+      schY={-1.099}
+      anchorSide="left"
+      net="SDA"
       connectsTo={[sel.U1.pin1]}
     />
   </board>
