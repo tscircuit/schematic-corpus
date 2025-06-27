@@ -101,14 +101,14 @@ export default () => (
       schX={1.4}
       schY={-1.1}
       anchorSide="left"
-      net="D0/RX"
+      net="D0"
       connectsTo={[sel.U1.pin1]}
     />
     <netlabel
       schX={1.4}
       schY={-1.3}
       anchorSide="left"
-      net="D1/TX"
+      net="D1"
       connectsTo={sel.U1.pin11}
     />
 

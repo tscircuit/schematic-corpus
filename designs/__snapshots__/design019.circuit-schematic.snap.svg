@@ -90,18 +90,18 @@
   " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="2.098048814602px"/><text class="net-label-text" x="678.536960626549" y="385.18777536889" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="18.882439331418px" transform="">CIPO</text><path class="net-label" d="
     M 669.09574096084,406.16826351491
     L 674.7604727602654,394.8387999160592
-    L 740.7091404992549,394.8387999160592
-    L 740.7091404992549,417.4977271137608
+    L 709.3363172249063,394.8387999160592
+    L 709.3363172249063,417.4977271137608
     L 674.7604727602654,417.4977271137608
     Z
-  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="2.098048814602px"/><text class="net-label-text" x="678.536960626549" y="406.16826351491" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="18.882439331418px" transform="">D0/RX</text><path class="net-label" d="
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="2.098048814602px"/><text class="net-label-text" x="678.536960626549" y="406.16826351491" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="18.882439331418px" transform="">D0</text><path class="net-label" d="
     M 669.09574096084,427.14875166093
     L 674.7604727602654,415.8192880620792
-    L 739.3104412895202,415.8192880620792
-    L 739.3104412895202,438.47821525978077
+    L 709.3363172249063,415.8192880620792
+    L 709.3363172249063,438.47821525978077
     L 674.7604727602654,438.47821525978077
     Z
-  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="2.098048814602px"/><text class="net-label-text" x="678.536960626549" y="427.14875166093" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="18.882439331418px" transform="">D1/TX</text><path class="net-label" d="
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="2.098048814602px"/><text class="net-label-text" x="678.536960626549" y="427.14875166093" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="18.882439331418px" transform="">D1</text><path class="net-label" d="
     M 669.09574096084,448.12923980694995
     L 674.7604727602654,436.79977620809916
     L 749.1013357576629,436.79977620809916
