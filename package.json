@@ -5,13 +5,12 @@
   "devDependencies": {
     "@biomejs/biome": "^2.0.0",
     "@types/bun": "latest",
-    "@types/node": "latest",
     "bun-match-svg": "^0.0.11",
     "circuit-json-to-bpc": "^0.0.3",
     "tscircuit": "^0.0.509",
     "@tscircuit/cli": "^0.1.149",
     "@tscircuit/core": "^0.0.524",
-    "@tscircuit/props": "^0.0.239"
+    "@tscircuit/props": "^0.0.246"
   },
   "files": [
     "dist"
