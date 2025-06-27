@@ -40,7 +40,6 @@ export default () => (
 
     <capacitor
       name="C3"
-      footprint="0402"
       schRotation="90deg"
       capacitance="4.7uF"
       connections={{

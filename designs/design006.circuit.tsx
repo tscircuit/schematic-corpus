@@ -56,14 +56,12 @@ export default () => (
 
     <resistor
       name="R5"
-      footprint="0402"
       schRotation="90deg"
       resistance="1k"
       connections={{ pin1: sel.D4.pin2 }}
     />
     <capacitor
       name="C3"
-      footprint="0402"
       schRotation="90deg"
       capacitance="4.7uF"
       connections={{

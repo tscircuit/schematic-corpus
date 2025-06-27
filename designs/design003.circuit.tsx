@@ -28,7 +28,6 @@ export default () => (
       connections={{
         pin2: sel.U1.pin2,
       }}
-      // footprint="0402"
       capacitance="1uF"
     />
     <netlabel

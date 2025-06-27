@@ -5,7 +5,6 @@ export default () => (
     <chip
       name="U1"
       manufacturerPartNumber="I2C_SENSOR"
-      footprint="soic4"
       pinLabels={{
         pin1: "SCL",
         pin2: "SDA",
