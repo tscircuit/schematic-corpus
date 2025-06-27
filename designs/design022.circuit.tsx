@@ -19,7 +19,7 @@ export default () => (
       schRotation={90}
       layer="bottom"
       connections={{
-        pin1: "R4.pin2",
+        pin1: sel.R4.pin2,
       }}
     />
     <resistor
@@ -30,7 +30,7 @@ export default () => (
       schY={0.5}
       schRotation={90}
       connections={{
-        pin1: "D3.pin1",
+        pin1: sel.D3.pin1,
       }}
     />
     <led
@@ -47,7 +47,7 @@ export default () => (
       schY={-1.7}
       net="GND"
       anchorSide="top"
-      connection="D3.pin2"
+      connection={sel.D3.pin2}
     />
   </board>
 )
