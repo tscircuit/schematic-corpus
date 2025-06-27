@@ -5,7 +5,6 @@ export default () => (
     <jumper
       name="U1"
       manufacturerPartNumber="I2C_SENSOR"
-      footprint="soic5"
       connections={{
         pin1: sel.net.VCC,
         pin2: sel.net.EN,
