@@ -74,9 +74,6 @@ export default () => (
       schX={1}
       color="red"
       schDisplayValue="GREEN"
-      connections={{
-        pin2: sel.J1.pin14,
-      }}
     />
     <netlabel
       schX={2.2}
@@ -104,9 +101,6 @@ export default () => (
       schX={2.2}
       color="red"
       schDisplayValue="YELLOW"
-      connections={{
-        pin2: sel.J1.pin14,
-      }}
     />
   </board>
 )
