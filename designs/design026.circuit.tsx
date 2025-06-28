@@ -38,21 +38,21 @@ export default () => (
       schY={0.5}
       anchorSide="bottom"
       net="V3_3"
-      connectsTo={sel.C6.pin2}
+      connectsTo={sel.C6.pin1}
     />
-    <capacitor name="C6" polarized schRotation="90deg" capacitance="10uF" />
+    <capacitor name="C6" polarized schRotation="270" capacitance="10uF" />
     <capacitor
       name="C16"
       capacitance="1.0uF"
       schRotation={90}
       connections={{
-        pin2: [sel.U1.pin2, sel.C6.pin2],
+        pin2: [sel.U1.pin2, sel.C6.pin1],
       }}
     />
     <netlabel
       schX={3}
       schY={-1.2}
-      connectsTo={sel.C6.pin1}
+      connectsTo={sel.C6.pin2}
       net="GND"
       anchorSide="top"
     />
