@@ -5,7 +5,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.0.0",
     "@tscircuit/cli": "^0.1.151",
-    "@tscircuit/core": "^0.0.531",
+    "@tscircuit/core": "^0.0.532",
     "@tscircuit/props": "^0.0.246",
     "@types/bun": "latest",
     "box-pin-color-graph": "^0.0.12",
