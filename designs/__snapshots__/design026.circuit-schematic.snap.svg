@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" style="background-color: rgb(245, 241, 237)" data-real-to-screen-transform="matrix(250,0,0,-250,419.2583333333,300)"><style>
+              .boundary { fill: rgb(245, 241, 237); }
+              .schematic-boundary { fill: none; stroke: #fff; }
+              .component { fill: none; stroke: rgb(132, 0, 0); }
+              .chip { fill: rgb(255, 255, 194); stroke: rgb(132, 0, 0); }
+              .component-pin { fill: none; stroke: rgb(132, 0, 0); }
+              .trace:hover {
+                filter: invert(1);
+              }
+              .trace:hover .trace-crossing-outline {
+                opacity: 0;
+              }
+              .trace:hover .trace-junction {
+                filter: invert(1);
+              }
+              .text { font-family: sans-serif; fill: rgb(0, 150, 0); }
+              .pin-number { fill: rgb(169, 0, 0); }
+              .port-label { fill: rgb(0, 100, 100); }
+              .component-name { fill: rgb(0, 100, 100); }
+            </style><rect class="boundary" x="0" y="0" width="1200" height="600"/><g data-circuit-json-type="schematic_component" data-schematic-component-id="schematic_component_0"><rect class="component-overlay" x="369.2583333333" y="125" width="150" height="100" fill="transparent"/><path d="M 519.2583333333 175 L 419.2583333333 175" stroke="rgb(132, 0, 0)" fill="none" stroke-width="5px" stroke-linecap="round"/><path d="M 369.2583333333 225 L 390.9525202891779 220.04844339512096 L 408.3499074567015 206.17449009293668 L 418.0047289423912 186.12604669781572 L 418.0047289423912 163.87395330218428 L 408.3499074567015 143.82550990706332 L 390.9525202891779 129.95155660487904 L 369.2583333333 125" stroke="rgb(132, 0, 0)" fill="none" stroke-width="5px" stroke-linecap="round"/><text x="356.7583333333" y="175" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" font-size="45px">TP4</text><circle cx="519.2583333333" cy="175" r="5px" stroke-width="5px" fill="none" stroke="rgb(132, 0, 0)"/></g><g data-circuit-json-type="schematic_component" data-schematic-component-id="schematic_component_1"><rect class="component-overlay" x="369.2583333333" y="250" width="150" height="100" fill="transparent"/><path d="M 519.2583333333 300 L 419.2583333333 300" stroke="rgb(132, 0, 0)" fill="none" stroke-width="5px" stroke-linecap="round"/><path d="M 369.2583333333 350 L 390.9525202891779 345.04844339512096 L 408.3499074567015 331.17449009293665 L 418.0047289423912 311.1260466978157 L 418.0047289423912 288.8739533021843 L 408.3499074567015 268.82550990706335 L 390.9525202891779 254.95155660487904 L 369.2583333333 250" stroke="rgb(132, 0, 0)" fill="none" stroke-width="5px" stroke-linecap="round"/><text x="356.7583333333" y="300" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" font-size="45px">TP5</text><circle cx="519.2583333333" cy="300" r="5px" stroke-width="5px" fill="none" stroke="rgb(132, 0, 0)"/></g><g data-circuit-json-type="schematic_component" data-schematic-component-id="schematic_component_2"><rect class="component-overlay" x="369.2583333333" y="375" width="150" height="100" fill="transparent"/><path d="M 519.2583333333 425 L 419.2583333333 425" stroke="rgb(132, 0, 0)" fill="none" stroke-width="5px" stroke-linecap="round"/><path d="M 369.2583333333 475 L 390.9525202891779 470.04844339512096 L 408.3499074567015 456.17449009293665 L 418.0047289423912 436.1260466978157 L 418.0047289423912 413.8739533021843 L 408.3499074567015 393.82550990706335 L 390.9525202891779 379.95155660487904 L 369.2583333333 375" stroke="rgb(132, 0, 0)" fill="none" stroke-width="5px" stroke-linecap="round"/><text x="356.7583333333" y="425" fill="rgb(15, 15, 15)" font-family="sans-serif" text-anchor="end" dominant-baseline="middle" font-size="45px">TP6</text><circle cx="519.2583333333" cy="425" r="5px" stroke-width="5px" fill="none" stroke="rgb(132, 0, 0)"/></g><g class="trace" data-circuit-json-type="schematic_trace" data-schematic-trace-id="schematic_trace_0"><path d="M 519.2583333333 175 L 619.2583333333 175" class="trace-invisible-hover-outline" stroke="rgb(0, 150, 0)" fill="none" stroke-width="40px" stroke-linecap="round" opacity="0" stroke-linejoin="round"/><path d="M 519.2583333333 175 L 619.2583333333 175" stroke="rgb(0, 150, 0)" fill="none" stroke-width="5px" stroke-linecap="round" stroke-linejoin="round"/></g><g class="trace" data-circuit-json-type="schematic_trace" data-schematic-trace-id="schematic_trace_1"><path d="M 519.2583333333 300 L 619.2583333333 300 L 619.2583333333 300" class="trace-invisible-hover-outline" stroke="rgb(0, 150, 0)" fill="none" stroke-width="40px" stroke-linecap="round" opacity="0" stroke-linejoin="round"/><path d="M 519.2583333333 300 L 619.2583333333 300 L 619.2583333333 300" stroke="rgb(0, 150, 0)" fill="none" stroke-width="5px" stroke-linecap="round" stroke-linejoin="round"/></g><g class="trace" data-circuit-json-type="schematic_trace" data-schematic-trace-id="schematic_trace_2"><path d="M 519.2583333333 425 L 619.2583333333 425 L 619.2583333333 425" class="trace-invisible-hover-outline" stroke="rgb(0, 150, 0)" fill="none" stroke-width="40px" stroke-linecap="round" opacity="0" stroke-linejoin="round"/><path d="M 519.2583333333 425 L 619.2583333333 425 L 619.2583333333 425" stroke="rgb(0, 150, 0)" fill="none" stroke-width="5px" stroke-linecap="round" stroke-linejoin="round"/></g><path class="net-label" d="
+    M 619.2583333333,175
+    L 632.7583333333,148
+    L 768.8916666666333,148
+    L 768.8916666666333,202
+    L 632.7583333333,202
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="5px"/><text class="net-label-text" x="641.7583333333" y="175" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="45px" transform="">CIPO</text><path class="net-label" d="
+    M 619.2583333333,300
+    L 632.7583333333,273
+    L 749.5249999999667,273
+    L 749.5249999999667,327
+    L 632.7583333333,327
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="5px"/><text class="net-label-text" x="641.7583333333" y="300" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="45px" transform="">SCK</text><path class="net-label" d="
+    M 619.2583333333,425
+    L 632.7583333333,398
+    L 861.9916666666334,398
+    L 861.9916666666334,452
+    L 632.7583333333,452
+    Z
+  " fill="rgba(255, 255, 255, 0.6)" stroke="rgb(132, 0, 0)" stroke-width="5px"/><text class="net-label-text" x="641.7583333333" y="425" fill="rgb(132, 0, 0)" text-anchor="start" dominant-baseline="central" font-family="sans-serif" font-variant-numeric="tabular-nums" font-size="45px" transform="">N_RESET</text></svg>
