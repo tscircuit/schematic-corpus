@@ -22,7 +22,7 @@ export default () => (
       schY="-0.5"
       anchorSide="top"
       net="GND"
-      connection="J1.pin4"
+      connectsTo={sel.J1.pin4}
     />
   </board>
 )
