@@ -7,24 +7,31 @@ export default () => (
       schWidth={1}
       schPinArrangement={{
         rightSide: {
-          pins: [1, 2],
+          pins: [1, 2, 3],
           direction: "top-to-bottom",
         },
       }}
     />
     <netlabel
-      schX="1.3"
-      schY="0.1"
+      schX="1.1"
+      schY="0.2"
       anchorSide="left"
-      net="A6"
+      net="CIPO"
       connection={sel.U1.pin1}
     />
     <netlabel
-      schX="1.3"
-      schY="-0.1"
+      schX="1.1"
+      schY="0.0"
       anchorSide="left"
-      net="A7"
+      net="SCK"
       connection={sel.U1.pin2}
+    />
+    <netlabel
+      schX="1.1"
+      schY="-0.2"
+      anchorSide="left"
+      net="N_RESET"
+      connection={sel.U1.pin3}
     />
   </board>
 )
