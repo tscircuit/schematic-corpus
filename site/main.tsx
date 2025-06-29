@@ -8,10 +8,10 @@ import circuitSvgs from "../dist/svg-vfs.js" // Record<designName, raw <svg…> 
 
 // ↓ add right after the import lines
 const svgMap: Record<string, string> = {}
-Object.entries(circuitSvgs as Record<string, string>).forEach(([k, v]) => {
-  const base = k.split(".")[0] // "design001.circuit-schematic.snap.svg" → "design001"
-  if (!(base in svgMap)) svgMap[base] = v
-})
+for (const [k, v] of Object.entries(circuitSvgs as Record<string, string>)) {
+  const base = k?.split(".")[0] // "design001.circuit-schematic.snap.svg" → "design001"
+  if (typeof base === "string" && !(base in svgMap)) svgMap[base] = v
+}
 
 // UTF-8 -> base64 helper (avoids “characters outside Latin1 range” errors)
 function toBase64(str: string): string {
@@ -136,8 +136,8 @@ function Gallery() {
         {designNames.map((designName) => {
           const src =
             viewMode === "bpc"
-              ? createSvgFromBpc(graphs[designName])
-              : createDataUriFromSvg(svgMap[designName])
+              ? createSvgFromBpc(graphs[designName]!)
+              : createDataUriFromSvg(svgMap[designName]!)
 
           return (
             <GraphCard
