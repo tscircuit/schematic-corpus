@@ -2,7 +2,7 @@
 import { convertCircuitJsonToBpc } from "circuit-json-to-bpc"
 import { promises as fs } from "fs"
 import { join, dirname, basename } from "path"
-import { getGraphicsForBpcGraph } from "box-pin-color-graph"
+import { getGraphicsForBpcGraph } from "bpc-graph"
 import { getSvgFromGraphicsObject } from "graphics-debug"
 
 async function getCircuitFiles(dir: string): Promise<string[]> {

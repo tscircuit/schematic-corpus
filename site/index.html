@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPC Graph Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 4px;
+            align-items: center;
+            justify-content: center;
+            max-width: 1300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .graph-card {
+            background: white;
+            border-radius: 8px;
+            padding: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .graph-title {
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333;
+        }
+        .graph-svg {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Schematic Corpus</h1>
+    </div>
+    <div id="gallery" class="gallery">
+        Loading...
+    </div>
+    <script type="module" src="./main.tsx"></script>
+</body>
+</html>
