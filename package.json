@@ -25,8 +25,9 @@
   },
   "scripts": {
     "start": "tsci dev",
+    "vercel-build": "bun run build && bun run build:site",
     "build": "tsci build --ignore-errors && bun run ./scripts/create-bpcs.ts",
-    "build:site": "bun bundle ./site/main.html",
+    "build:site": "bun build ./site/index.html --outdir ./dist-site",
     "start:site": "bun run ./site/index.html",
     "snapshot": "tsci snapshot --schematic-only",
     "snapshot:update": "tsci snapshot --update --schematic-only",
