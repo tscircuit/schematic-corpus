@@ -3,6 +3,24 @@ import { createRoot } from "react-dom/client"
 import { getGraphicsForBpcGraph } from "bpc-graph"
 import { getSvgFromGraphicsObject } from "graphics-debug"
 import bundledBpcGraphs from "../dist/bundled-bpc-graphs.json"
+// @ts-ignore – generated at build time
+import circuitSvgs from "../dist/svg-vfs.js" // Record<designName, raw <svg…> string>
+
+// ↓ add right after the import lines
+const svgMap: Record<string, string> = {}
+Object.entries(circuitSvgs as Record<string, string>).forEach(([k, v]) => {
+  const base = k.split(".")[0] // "design001.circuit-schematic.snap.svg" → "design001"
+  if (!(base in svgMap)) svgMap[base] = v
+})
+
+// UTF-8 -> base64 helper (avoids “characters outside Latin1 range” errors)
+function toBase64(str: string): string {
+  return btoa(
+    encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p) =>
+      String.fromCharCode(parseInt(p, 16)),
+    ),
+  )
+}
 
 // memoize SVG data URIs so we never regenerate the same graphic
 const svgCache = new WeakMap<object, string>()
@@ -17,14 +35,24 @@ function createSvgFromBpc(bpc: any): string {
   const svgString = getSvgFromGraphicsObject(graphics, {
     backgroundColor: "white",
   })
-  const dataUri = `data:image/svg+xml;base64,${btoa(svgString)}`
+  const dataUri = `data:image/svg+xml;base64,${toBase64(svgString)}`
   svgCache.set(bpc, dataUri)
+  return dataUri
+}
+
+const svgTextCache = new Map<string, string>()
+
+function createDataUriFromSvg(svg: string): string {
+  const cached = svgTextCache.get(svg)
+  if (cached) return cached
+  const dataUri = `data:image/svg+xml;base64,${toBase64(svg)}`
+  svgTextCache.set(svg, dataUri)
   return dataUri
 }
 
 interface GraphCardProps {
   designName: string
-  bpc: any
+  src: string
   onPreviewEnter: (src: string, e: React.MouseEvent<HTMLImageElement>) => void
   onPreviewLeave: () => void
   onPreviewMove: (e: React.MouseEvent<HTMLImageElement>) => void
@@ -32,21 +60,19 @@ interface GraphCardProps {
 
 function GraphCard({
   designName,
-  bpc,
+  src,
   onPreviewEnter,
   onPreviewLeave,
   onPreviewMove,
 }: GraphCardProps) {
-  const svgDataUri = createSvgFromBpc(bpc)
-
   return (
     <div className="graph-card">
       <div className="graph-title">{designName}</div>
       <img
-        src={svgDataUri}
-        alt={`BPC Graph for ${designName}`}
+        src={src}
+        alt={designName}
         className="graph-svg"
-        onMouseEnter={(e) => onPreviewEnter(svgDataUri, e)}
+        onMouseEnter={(e) => onPreviewEnter(src, e)}
         onMouseLeave={onPreviewLeave}
         onMouseMove={onPreviewMove}
       />
@@ -57,6 +83,8 @@ function GraphCard({
 function Gallery() {
   const graphs = bundledBpcGraphs as Record<string, any>
   const designNames = Object.keys(graphs).sort()
+
+  const [viewMode, setViewMode] = React.useState<"bpc" | "svg">("svg")
 
   const [preview, setPreview] = React.useState<{
     src: string
@@ -79,31 +107,49 @@ function Gallery() {
 
   const computePos = (coord: number, size: number, viewport: number) => {
     // place on the side that keeps the image fully visible.
-    if (coord + OFFSET + size <= viewport) return coord + OFFSET            // fits after cursor
-    if (coord - OFFSET - size >= 0)        return coord - OFFSET - size     // fits before cursor
+    if (coord + OFFSET + size <= viewport) return coord + OFFSET // fits after cursor
+    if (coord - OFFSET - size >= 0) return coord - OFFSET - size // fits before cursor
     // otherwise clamp to viewport
     return Math.max(Math.min(coord, viewport - size), 0)
   }
 
   /* calculate preview placement each render */
-  const previewLeft  =
-    preview ? computePos(preview.x, PREVIEW_W, window.innerWidth) : 0
-  const previewTop   =
-    preview ? computePos(preview.y, PREVIEW_H, window.innerHeight) : 0
+  const previewLeft = preview
+    ? computePos(preview.x, PREVIEW_W, window.innerWidth)
+    : 0
+  const previewTop = preview
+    ? computePos(preview.y, PREVIEW_H, window.innerHeight)
+    : 0
 
   return (
     <>
+      <div className="header">
+        <h1>Schematic Corpus</h1>
+        <button
+          className="toggle-btn"
+          onClick={() => setViewMode((v) => (v === "bpc" ? "svg" : "bpc"))}
+        >
+          {viewMode === "bpc" ? "Show Circuit SVGs" : "Show BPC Graphs"}
+        </button>
+      </div>
       <div id="gallery" className="gallery">
-        {designNames.map((designName) => (
-          <GraphCard
-            key={designName}
-            designName={designName}
-            bpc={graphs[designName]}
-            onPreviewEnter={showPreview}
-            onPreviewLeave={hidePreview}
-            onPreviewMove={movePreview}
-          />
-        ))}
+        {designNames.map((designName) => {
+          const src =
+            viewMode === "bpc"
+              ? createSvgFromBpc(graphs[designName])
+              : createDataUriFromSvg(svgMap[designName])
+
+          return (
+            <GraphCard
+              key={designName}
+              designName={designName}
+              src={src}
+              onPreviewEnter={showPreview}
+              onPreviewLeave={hidePreview}
+              onPreviewMove={movePreview}
+            />
+          )
+        })}
       </div>
       {preview && (
         <img
@@ -129,7 +175,7 @@ function Gallery() {
   )
 }
 
-const container = document.getElementById("gallery")
+const container = document.getElementById("root")
 if (container) {
   const root = createRoot(container)
   root.render(<Gallery />)
