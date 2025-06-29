@@ -8,10 +8,14 @@
     "@tscircuit/core": "^0.0.532",
     "@tscircuit/props": "^0.0.246",
     "@types/bun": "latest",
-    "box-pin-color-graph": "^0.0.12",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
     "bun-match-svg": "^0.0.11",
     "circuit-json-to-bpc": "^0.0.6",
     "graphics-debug": "^0.0.47",
+    "make-vfs": "^1.0.16",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "tscircuit": "^0.0.511"
   },
   "files": [
@@ -22,11 +26,18 @@
   },
   "scripts": {
     "start": "tsci dev",
+    "vercel-build": "bun run build && bun run build:site",
     "build": "tsci build --ignore-errors && bun run ./scripts/create-bpcs.ts",
+    "build:svgs": "make-vfs --dir ./designs/__snapshots__ --outfile ./dist/svg-vfs.js --content-format string",
+    "build:site": "bun run build:svgs && bun build ./site/index.html --outdir ./dist-site",
+    "start:site": "bun run ./site/index.html",
     "snapshot": "tsci snapshot --schematic-only",
     "snapshot:update": "tsci snapshot --update --schematic-only",
     "format": "biome format --write .",
     "format:check": "biome format ."
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "bpc-graph": "^0.0.17"
+  }
 }
