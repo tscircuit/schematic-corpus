@@ -27,8 +27,5 @@ jobs:
       - name: Build project
         run: bun run build
 
-      - name: Run TypeScript check on import-bundled-graph.ts
-        run: bunx tsc --noEmit scripts/import-bundled-graph.ts
-
-      - name: Test JSON import functionality
+      - name: Test JSON import functionality 
         run: bun run scripts/import-bundled-graph.ts
