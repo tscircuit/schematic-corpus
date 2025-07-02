@@ -2,7 +2,7 @@ import React from "react"
 import { createRoot } from "react-dom/client"
 import { getGraphicsForBpcGraph } from "bpc-graph"
 import { getSvgFromGraphicsObject } from "graphics-debug"
-import bundledBpcGraphs from "dist/bundled-bpc-graphs.json"
+import bundledBpcGraphs from "@tscircuit/schematic-corpus"
 // @ts-ignore – generated at build time
 import circuitSvgs from "dist/svg-vfs.js" // Record<designName, raw <svg…> string>
 
@@ -13,7 +13,7 @@ for (const [k, v] of Object.entries(circuitSvgs as Record<string, string>)) {
   if (typeof base === "string" && !(base in svgMap)) svgMap[base] = v
 }
 
-// UTF-8 -> base64 helper (avoids “characters outside Latin1 range” errors)
+// UTF-8 -> base64 helper (avoids "characters outside Latin1 range" errors)
 function toBase64(str: string): string {
   return btoa(
     encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p) =>
