@@ -33,7 +33,6 @@ export default () => (
   <board routingDisabled manualEdits={manualEdits}>
     <chip
       name="U1"
-      schWidth={1}
       schPinArrangement={{
         rightSide: {
           pins: [1, 2, 3],

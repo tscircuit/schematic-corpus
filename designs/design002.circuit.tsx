@@ -2,10 +2,15 @@ import { sel } from "tscircuit"
 
 export default () => (
   <board routingDisabled>
-    <jumper
+    <chip
       name="U1"
       manufacturerPartNumber="I2C_SENSOR"
-      footprint="soic5"
+      schPinArrangement={{
+        rightSide: {
+          pins: [1, 2, 3, 4, 5],
+          direction: "bottom-to-top",
+        },
+      }}
       connections={{
         pin1: sel.net.VCC,
         pin2: sel.net.EN,

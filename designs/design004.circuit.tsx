@@ -31,9 +31,14 @@ const manualEdits = {
 
 export default () => (
   <board routingDisabled manualEdits={manualEdits}>
-    <jumper
+    <chip
       name="U1"
-      pinCount={3}
+      schPinArrangement={{
+        rightSide: {
+          pins: [1, 2, 3],
+          direction: "bottom-to-top",
+        },
+      }}
       schPinStyle={{
         pin1: { marginTop: 0.1 },
         pin2: { marginTop: 0.1 },

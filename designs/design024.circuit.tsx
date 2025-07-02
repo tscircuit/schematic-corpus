@@ -2,11 +2,10 @@ import { sel } from "tscircuit"
 
 export default () => (
   <board width="10mm" height="10mm">
-    <jumper
+    <chip
       name="JP12"
-      footprint="pinrow10"
       schY="-3.63"
-      schPortArrangement={{
+      schPinArrangement={{
         rightSide: {
           direction: "bottom-to-top",
           pins: [
