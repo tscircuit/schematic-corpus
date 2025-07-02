@@ -1,0 +1,46 @@
+# Created using @tscircuit/plop (npm install -g @tscircuit/plop)
+name: Import Bundled Graph Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  import-bundled-graph-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build project
+        run: bun run build
+
+      - name: Run TypeScript check on import-bundled-graph.ts
+        run: bunx tsc --noEmit scripts/import-bundled-graph.ts
+
+      - name: Test JSON import functionality
+        run: bun run scripts/import-bundled-graph.ts
+
+      - name: Verify the import actually works
+        run: |
+          bun -e "
+          import bundledBpcGraphs from './dist/bundled-bpc-graphs.json' with { type: 'json' };
+          console.log('✅ JSON import successful');
+          console.log('Graph count:', Object.keys(bundledBpcGraphs).length);
+          if (Object.keys(bundledBpcGraphs).length === 0) {
+            console.error('❌ No graphs found in bundled data');
+            process.exit(1);
+          }
+          " 
