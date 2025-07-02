@@ -2,7 +2,17 @@ import { sel } from "tscircuit"
 
 export default () => (
   <board width="10mm" height="10mm">
-    <jumper name="J1" schX={0} schY={-5} footprint="pinrow8" />
+    <chip
+      name="J1"
+      schX={0}
+      schY={-5}
+      schPinArrangement={{
+        rightSide: {
+          direction: "bottom-to-top",
+          pins: [1, 2, 3, 4, 5, 6, 7, 8],
+        },
+      }}
+    />
     <netlabel
       schX={1}
       schY={-5.6}

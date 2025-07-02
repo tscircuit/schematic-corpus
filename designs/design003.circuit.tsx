@@ -2,9 +2,14 @@ import { sel } from "tscircuit"
 
 export default () => (
   <board routingDisabled>
-    <jumper
+    <chip
       name="U1"
-      pinCount={2}
+      schPinArrangement={{
+        rightSide: {
+          pins: [1, 2],
+          direction: "bottom-to-top",
+        },
+      }}
       connections={{
         pin2: sel.net().OUT,
       }}

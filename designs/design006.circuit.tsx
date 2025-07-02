@@ -40,7 +40,6 @@ export default () => (
   <board routingDisabled manualEdits={manualEdits}>
     <chip
       name="U1"
-      schWidth={1}
       schPinStyle={{
         pin1: { marginBottom: 0.1 },
         pin2: { marginTop: 0.1 },

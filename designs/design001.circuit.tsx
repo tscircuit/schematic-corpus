@@ -4,25 +4,17 @@ export default () => (
   <board routingDisabled>
     <chip
       name="U1"
-      manufacturerPartNumber="I2C_SENSOR"
-      footprint="soic4"
-      pinLabels={{
-        pin1: "SCL",
-        pin2: "SDA",
-        pin3: "VCC",
-        pin4: "GND",
-      }}
       schPinArrangement={{
         rightSide: {
           direction: "top-to-bottom",
-          pins: ["SCL", "SDA", "VCC", "GND"],
+          pins: [1, 2, 3, 4],
         },
       }}
       connections={{
-        SCL: sel.net.SCL,
-        SDA: sel.net.SDA,
-        VCC: sel.net.V3_3,
-        GND: sel.net.GND,
+        pin1: sel.net.SCL,
+        pin2: sel.net.SDA,
+        pin3: sel.net.V3_3,
+        pin4: sel.net.GND,
       }}
     />
     <netlabel
@@ -30,13 +22,13 @@ export default () => (
       schY={-1}
       anchorSide="top"
       net="GND"
-      connection="U1.GND"
+      connection="U1.pin4"
     />
     <netlabel
       schX={2}
       schY={0.8}
       net="VCC"
-      connection="U1.VCC"
+      connection="U1.pin3"
       anchorSide="bottom"
     />
   </board>

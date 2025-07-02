@@ -6,7 +6,6 @@ export default () => (
       name="J1"
       schX={0}
       schY={-5}
-      footprint="pinrow9"
       schPinArrangement={{
         rightSide: {
           direction: "top-to-bottom",

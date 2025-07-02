@@ -4,7 +4,6 @@ export default () => (
   <board width="10mm" height="10mm">
     <chip
       name="U1"
-      schWidth={1}
       schPinArrangement={{
         rightSide: {
           pins: [1, 2, 3, 4, 5, 6, 7, 8, 9],
