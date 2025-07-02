@@ -32,15 +32,3 @@ jobs:
 
       - name: Test JSON import functionality
         run: bun run scripts/import-bundled-graph.ts
-
-      - name: Verify the import actually works
-        run: |
-          bun -e "
-          import bundledBpcGraphs from './dist/bundled-bpc-graphs.json' with { type: 'json' };
-          console.log('✅ JSON import successful');
-          console.log('Graph count:', Object.keys(bundledBpcGraphs).length);
-          if (Object.keys(bundledBpcGraphs).length === 0) {
-            console.error('❌ No graphs found in bundled data');
-            process.exit(1);
-          }
-          " 
