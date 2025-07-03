@@ -1,7 +1,7 @@
 import { sel } from "tscircuit"
 
 export default () => (
-  <board width="10mm" height="10mm">
+  <board width="10mm" height="10mm" routingDisabled>
     <chip
       name="J1"
       schX={0}
