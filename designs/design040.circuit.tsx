@@ -7,7 +7,6 @@ export default () => (
       resistance="1k"
       schX={0}
       schY={0}
-      schRotation={90}
       connections={{ pin1: sel.net.VCC, pin2: sel.C1.pin1 }}
     />
     <capacitor
@@ -15,7 +14,6 @@ export default () => (
       capacitance="0.1uF"
       schX={1.2}
       schY={0}
-      schRotation={90}
       connections={{ pin1: sel.R1.pin2, pin2: sel.net.GND }}
     />
     <netlabel
