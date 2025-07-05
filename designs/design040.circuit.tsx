@@ -17,14 +17,14 @@ export default () => (
       connections={{ pin1: sel.R1.pin2, pin2: sel.net.GND }}
     />
     <netlabel
-      schX={-0.3}
+      schX={-0.6}
       schY={0.6}
       net="VCC"
       anchorSide="bottom"
       connection="R1.pin1"
     />
     <netlabel
-      schX={1.5}
+      schX={1.8}
       schY={-0.6}
       net="GND"
       anchorSide="top"
