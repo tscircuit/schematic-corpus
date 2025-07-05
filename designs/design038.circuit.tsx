@@ -5,24 +5,16 @@ const manualEdits = {
     {
       selector: "R7",
       center: {
-        x: 2.4656774234267718,
-        y: -0.4119212265018479,
-      },
-      relative_to: "group_center",
-    },
-    {
-      selector: "R8",
-      center: {
-        x: 3.42356435005807,
-        y: -0.4119212265018479,
+        x: 1.2903698145600535,
+        y: 0.6979990351096542,
       },
       relative_to: "group_center",
     },
     {
       selector: "JP1",
       center: {
-        x: 1.8189948209575044,
-        y: -0.582983881653447,
+        x: 1.6488712810168582,
+        y: -0.5996349901814374,
       },
       relative_to: "group_center",
     },
@@ -49,14 +41,9 @@ export default () => (
       resistance="2.2k"
       name="R7"
       schRotation={90}
-      connections={{ pin2: sel.U1.pin2 }}
+      connections={{ pin1: sel.U1.pin2 }}
     />
-    <resistor
-      resistance="2.2k"
-      name="R8"
-      schRotation={90}
-      connections={{ pin2: sel.U1.pin1 }}
-    />
+    {/* <resistor resistance="2.2k" name="R8" schRotation={90} connections={{pin2:sel.U1.pin1}}/> */}
     <solderjumper
       name="JP1"
       footprint="solderjumper2_bridged12"
@@ -66,25 +53,32 @@ export default () => (
       connections={{ pin2: sel.U1.pin3 }}
     />
     <netlabel
-      schX={2.468}
-      schY={-1.15}
-      net="GND"
-      connectsTo={[sel.R7.pin1]}
-      anchorSide="top"
+      schX={1.7}
+      schY={0.15}
+      net="SD_CS_PA07"
+      anchorSide="left"
+      connectsTo={sel.R7.pin1}
     />
     <netlabel
-      schX={3.423}
+      schX={1.65}
       schY={-1.15}
-      net="GND"
-      connectsTo={[sel.R8.pin1]}
-      anchorSide="top"
-    />
-    <netlabel
-      schX={1.82}
-      schY={-1.25}
       net="GND"
       connectsTo={[sel.JP1.pin1]}
       anchorSide="top"
+    />
+    <netlabel
+      schX={0.8}
+      schY={0.8}
+      net="V3_3"
+      connectsTo={sel.U1.pin1}
+      anchorSide="bottom"
+    />
+    <netlabel
+      schX={1.29}
+      schY={1.5}
+      net="V3_3"
+      connectsTo={sel.R7.pin2}
+      anchorSide="bottom"
     />
     <netlabel
       schX={1}
