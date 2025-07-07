@@ -10,6 +10,7 @@
     "@types/bun": "^1.2.18",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "bpc-graph": "^0.0.49",
     "bun-match-svg": "^0.0.11",
     "circuit-json-to-bpc": "^0.0.6",
     "graphics-debug": "^0.0.47",
@@ -23,7 +24,8 @@
     "dist"
   ],
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5",
+    "bpc-graph": "*"
   },
   "scripts": {
     "start": "tsci dev",
@@ -37,8 +39,5 @@
     "format": "biome format --write .",
     "format:check": "biome format ."
   },
-  "type": "module",
-  "dependencies": {
-    "bpc-graph": "^0.0.17"
-  }
+  "type": "module"
 }
