@@ -24,8 +24,7 @@
     "dist"
   ],
   "peerDependencies": {
-    "typescript": "^5",
-    "bpc-graph": "*"
+    "typescript": "^5"
   },
   "scripts": {
     "start": "tsci dev",
