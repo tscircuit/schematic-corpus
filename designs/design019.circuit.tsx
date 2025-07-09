@@ -45,7 +45,7 @@ export default () => (
       schY={0.5}
       anchorSide="left"
       net="A1"
-      connectsTo={sel.U1.pin9}
+      connectsTo={sel.U1.pin11}
     />
     <netlabel
       schX={1.4}
@@ -59,56 +59,56 @@ export default () => (
       schY={0.1}
       anchorSide="left"
       net="A3"
-      connectsTo={sel.U1.pin7}
+      connectsTo={sel.U1.pin9}
     />
     <netlabel
       schX={1.4}
       schY={-0.1}
       anchorSide="left"
       net="A4"
-      connectsTo={sel.U1.pin6}
+      connectsTo={sel.U1.pin8}
     />
     <netlabel
       schX={1.4}
       schY={-0.3}
       anchorSide="left"
       net="A5"
-      connectsTo={sel.U1.pin5}
+      connectsTo={sel.U1.pin7}
     />
     <netlabel
       schX={1.4}
       schY={-0.5}
       anchorSide="left"
       net="SCK"
-      connectsTo={sel.U1.pin4}
+      connectsTo={sel.U1.pin6}
     />
     <netlabel
       schX={1.4}
       schY={-0.7}
       anchorSide="left"
       net="COPI"
-      connectsTo={sel.U1.pin3}
+      connectsTo={sel.U1.pin5}
     />
     <netlabel
       schX={1.4}
       schY={-0.9}
       anchorSide="left"
       net="CIPO"
-      connectsTo={sel.U1.pin2}
+      connectsTo={sel.U1.pin4}
     />
     <netlabel
       schX={1.4}
       schY={-1.1}
       anchorSide="left"
       net="D0"
-      connectsTo={[sel.U1.pin1]}
+      connectsTo={sel.U1.pin3}
     />
     <netlabel
       schX={1.4}
       schY={-1.3}
       anchorSide="left"
       net="D1"
-      connectsTo={sel.U1.pin11}
+      connectsTo={sel.U1.pin2}
     />
 
     <netlabel
@@ -116,7 +116,7 @@ export default () => (
       schY={-1.5}
       anchorSide="left"
       net="BOOT0"
-      connectsTo={sel.U1.pin11}
+      connectsTo={sel.U1.pin1}
     />
   </board>
 )
