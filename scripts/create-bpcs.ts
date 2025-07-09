@@ -43,7 +43,7 @@ async function main() {
     const netLabelBoxIds = bpcNoNetLabel.boxes
       .filter((box) => {
         const boxPins = bpcNoNetLabel.pins.filter((p) => p.boxId === box.boxId)
-        return !boxPins.some((p) => p.color === "netlabel_center")
+        return boxPins.some((p) => p.color === "netlabel_center")
       })
       .map((b) => b.boxId)
     bpcNoNetLabel.boxes = bpcNoNetLabel.boxes.filter(
@@ -55,7 +55,10 @@ async function main() {
     )
 
     const outPathNoNetLabel = join(dir, "bpc-no-net-label.json")
-    await fs.writeFile(outPath, JSON.stringify(bpc, null, 2))
+    await fs.writeFile(
+      outPathNoNetLabel,
+      JSON.stringify(bpcNoNetLabel, null, 2),
+    )
 
     const graphics = getGraphicsForBpcGraph(bpc)
     const svg = getSvgFromGraphicsObject(graphics, { backgroundColor: "white" })
