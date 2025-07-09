@@ -31,7 +31,7 @@
     "vercel-build": "bun run build && bun run build:site",
     "build": "tsci build --ignore-errors && bun run ./scripts/create-bpcs.ts && bun build lib/index.ts --outfile ./dist/index.js && cp ./lib/index.d.ts ./dist/index.d.ts",
     "build:svgs": "make-vfs --dir ./designs/__snapshots__ --outfile ./dist/svg-vfs.js --content-format string",
-    "build:site": "bun run build:svgs && bun build ./site/index.html --outdir ./dist-site",
+    "build:site": "bun run build:svgs && bun build ./site/index.html --outdir ./dist-site && bun run ./scripts/copy-svgs-to-site.ts",
     "start:site": "bun run ./site/index.html",
     "snapshot": "tsci snapshot --schematic-only",
     "snapshot:update": "tsci snapshot --update --schematic-only",
