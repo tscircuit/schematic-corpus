@@ -24,7 +24,7 @@ export default () => (
       schRotation={90}
       schX={1.5}
       schY={0.8}
-      connections={{ pin1: sel.U1.pin1,pin2:sel.C1.pin2}}
+      connections={{ pin1: sel.U1.pin1, pin2: sel.C1.pin2 }}
     />
     <resistor
       name="R2"
@@ -32,8 +32,7 @@ export default () => (
       schRotation={90}
       schX={2.5}
       schY={0.8}
-      connections={{ pin1: sel.U1.pin2,pin2:sel.C1.pin2}}
-
+      connections={{ pin1: sel.U1.pin2, pin2: sel.C1.pin2 }}
     />
     <netlabel
       schX={0.6}
