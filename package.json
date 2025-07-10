@@ -36,7 +36,5 @@
     "format:check": "biome format ."
   },
   "type": "module",
-  "dependencies": {
-    "@tscircuit/schematic-corpus": "^0.0.54"
-  }
+  "dependencies": {}
 }
