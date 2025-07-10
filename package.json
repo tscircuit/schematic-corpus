@@ -38,5 +38,8 @@
     "format": "biome format --write .",
     "format:check": "biome format ."
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@tscircuit/schematic-corpus": "^0.0.54"
+  }
 }
