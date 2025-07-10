@@ -2,7 +2,7 @@ import React from "react"
 import { createRoot } from "react-dom/client"
 import { getGraphicsForBpcGraph } from "bpc-graph"
 import { getSvgFromGraphicsObject } from "graphics-debug"
-import bundledBpcGraphs from "dist/bundled-bpc-graphs.json"
+import bundledBpcGraphs from "@tscircuit/schematic-corpus/dist/bundled-bpc-graphs.json"
 // @ts-ignore – generated at build time
 import circuitSvgs from "dist/svg-vfs.js" // Record<designName, raw <svg…> string>
 
