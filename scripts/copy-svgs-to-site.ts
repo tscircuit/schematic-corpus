@@ -1,9 +1,10 @@
 #!/usr/bin/env bun
 import { promises as fs } from "fs"
 import { join, dirname } from "path"
+import { fileURLToPath } from "url"
 
 async function main() {
-  const scriptDir = dirname(new URL(import.meta.url).pathname)
+  const scriptDir = dirname(fileURLToPath(import.meta.url))
   const snapshotsDir = join(scriptDir, "..", "designs", "__snapshots__")
   const outDir = join(scriptDir, "..", "dist-site")
   await fs.mkdir(outDir, { recursive: true })
