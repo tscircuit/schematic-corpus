@@ -92,12 +92,18 @@ function Gallery() {
     y: number
   } | null>(null)
 
+  const TABLET_WIDTH = 768
+
   const showPreview = (src: string, e: React.MouseEvent<HTMLImageElement>) =>
+    window.innerWidth >= TABLET_WIDTH &&
     setPreview({ src, x: e.clientX, y: e.clientY })
 
-  const hidePreview = () => setPreview(null)
+  const hidePreview = () => {
+    setPreview(null)
+  }
 
   const movePreview = (e: React.MouseEvent<HTMLImageElement>) =>
+    window.innerWidth >= TABLET_WIDTH &&
     setPreview((p) => (p ? { ...p, x: e.clientX, y: e.clientY } : p))
 
   /* --- constants & helpers for preview positioning --- */
