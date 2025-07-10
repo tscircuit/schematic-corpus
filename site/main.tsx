@@ -125,6 +125,23 @@ function Gallery() {
     <>
       <div className="header">
         <h1>Schematic Corpus</h1>
+        <a
+          href="https://github.com/tscircuit/schematic-corpus"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://img.shields.io/github/stars/tscircuit/schematic-corpus?style=social"
+            alt="GitHub Stars"
+          />
+        </a>
+        <a
+          href="https://bpc-graph.vercel.app/renderer.html?fixtureId=%7B%22path%22%3A%22pages%2Fschematic-layout%2Finteractive-schematic-layout.page.tsx%22%7D&locked=true"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Schematic Layout Debugger
+        </a>
         <button
           className="toggle-btn"
           onClick={() => setViewMode((v) => (v === "bpc" ? "svg" : "bpc"))}
