@@ -1,23 +1,20 @@
 {
   "name": "@tscircuit/schematic-corpus",
-  "version": "0.0.58",
+  "version": "0.0.59",
   "main": "./dist/index.js",
   "devDependencies": {
     "@biomejs/biome": "^2.0.0",
-    "@tscircuit/cli": "^0.1.151",
-    "@tscircuit/core": "^0.0.532",
-    "@tscircuit/props": "^0.0.246",
     "@types/bun": "^1.2.18",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "bpc-graph": "^0.0.49",
+    "bpc-graph": "^0.0.60",
     "bun-match-svg": "^0.0.11",
     "circuit-json-to-bpc": "^0.0.6",
     "graphics-debug": "^0.0.60",
     "make-vfs": "^1.0.16",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tscircuit": "^0.0.525",
+    "tscircuit": "^0.0.528",
     "tsdown": "^0.12.9"
   },
   "files": [
