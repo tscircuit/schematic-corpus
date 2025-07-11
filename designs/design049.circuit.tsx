@@ -10,14 +10,6 @@ export default () => (
           direction: "bottom-to-top",
         },
       }}
-      schPinStyle={{
-        pin3: {
-          marginBottom: 0.2,
-        },
-        pin2: {
-          marginBottom: 0.2,
-        },
-      }}
     />
     <capacitor
       name="C54"

@@ -6,7 +6,7 @@ const manualEdits = {
       selector: "R3",
       center: {
         x: 1.8047692924586682,
-        y: -0.30531546479810595,
+        y: -0.39531546479810595,
       },
       relative_to: "group_center",
     },
@@ -14,7 +14,7 @@ const manualEdits = {
       selector: "C1",
       center: {
         x: 2.9975939099066515,
-        y: -0.2360076117178601,
+        y: -0.3260076117178601,
       },
       relative_to: "group_center",
     },
@@ -39,17 +39,13 @@ export default () => (
           direction: "bottom-to-top",
         },
       }}
-      schPinStyle={{
-        pin1: { marginTop: 0.1 },
-        pin2: { marginTop: 0.1 },
-      }}
     />
     <netlabel
       schX={3}
       schY={0.5}
       anchorSide="bottom"
       net="VIN"
-      connectsTo={sel.C1.pin2}
+      connectsTo={sel.C1.pin1}
     />
     <netlabel
       schX={2}
@@ -58,20 +54,20 @@ export default () => (
       net="EN"
       connectsTo={sel.R3.pin1}
     />
-    <capacitor name="C1" polarized schRotation="90deg" capacitance="1uF" />
+    <capacitor name="C1" polarized schRotation="-90deg" capacitance="1uF" />
     <resistor
       name="R3"
       resistance="10k"
       schRotation={90}
       connections={{
-        pin2: [sel.U1.pin3, sel.C1.pin2],
+        pin2: [sel.U1.pin3, sel.C1.pin1],
         pin1: sel.U1.pin2,
       }}
     />
     <netlabel
       schX={3}
       schY={-2}
-      connectsTo={sel.C1.pin1}
+      connectsTo={sel.C1.pin2}
       net="GND"
       anchorSide="top"
     />

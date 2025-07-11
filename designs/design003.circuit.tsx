@@ -13,9 +13,6 @@ export default () => (
       connections={{
         pin2: sel.net().OUT,
       }}
-      schPinStyle={{
-        pin1: { marginTop: 0.6 },
-      }}
     />
     <netlabel
       schX={2}
@@ -29,9 +26,9 @@ export default () => (
       schX={2}
       schY={-1}
       polarized
-      schRotation="90deg"
+      schRotation="-90deg"
       connections={{
-        pin2: sel.U1.pin2,
+        pin1: sel.U1.pin2,
       }}
       // footprint="0402"
       capacitance="1uF"
@@ -39,7 +36,7 @@ export default () => (
     <netlabel
       schX={2}
       schY={-2}
-      connectsTo={sel.C1.pin1}
+      connectsTo={sel.C1.pin2}
       net="GND"
       anchorSide="top"
     />

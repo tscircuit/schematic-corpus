@@ -6,7 +6,7 @@ const manualEdits = {
       selector: "U1",
       center: {
         x: 0.2,
-        y: 1.609699501685428,
+        y: 1.709699501685428,
       },
       relative_to: "group_center",
     },
@@ -47,9 +47,6 @@ export default () => (
           direction: "top-to-bottom",
         },
       }}
-      schPinStyle={{
-        pin2: { marginBottom: 0.25 },
-      }}
       connections={{
         pin1: sel.R12.pin1,
         pin2: sel.R16.pin1,
@@ -83,14 +80,14 @@ export default () => (
     />
     <netlabel
       schX={3.2}
-      schY={1.84}
+      schY={1.85}
       anchorSide="left"
       net="DBG_SCL"
       connectsTo={sel.U1.pin2}
     />
     <netlabel
       schX={3.2}
-      schY={1.39}
+      schY={1.65}
       anchorSide="left"
       net="DBG_WP"
       connectsTo={sel.U1.pin3}

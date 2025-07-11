@@ -31,11 +31,6 @@ export default () => (
           pins: [1, 2, 3, 4],
         },
       }}
-      schPinStyle={{
-        pin1: { marginBottom: 0.1 },
-        pin2: { marginBottom: 0.1 },
-        pin3: { marginBottom: 0.1 },
-      }}
     />
     <resistor
       resistance="2.2k"

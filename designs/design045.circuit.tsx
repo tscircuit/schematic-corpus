@@ -23,11 +23,6 @@ export default () => (
           pins: [1, 2, 3, 4],
         },
       }}
-      schPinStyle={{
-        pin1: { marginBottom: 0.2 },
-        pin2: { marginBottom: 0.2 },
-        pin3: { marginBottom: 0.2 },
-      }}
     />
     <resistor
       name="R23"
@@ -51,21 +46,21 @@ export default () => (
     />
     <netlabel
       schX={1.58}
-      schY={0.6}
+      schY={0.31}
       net="N_GAUGE_ALERT"
       anchorSide="left"
       connectsTo={sel.U1.pin1}
     />
     <netlabel
       schX={1.58}
-      schY={0.2}
+      schY={0.11}
       net="ESP32_SDA"
       anchorSide="left"
       connectsTo={sel.U1.pin2}
     />
     <netlabel
       schX={1.58}
-      schY={-0.2}
+      schY={-0.11}
       net="ESP32_SCL"
       connectsTo={sel.U1.pin3}
       anchorSide="left"

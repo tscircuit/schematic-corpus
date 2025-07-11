@@ -4,9 +4,7 @@ export default () => (
   <board routingDisabled>
     <chip
       name="U1"
-      schPinStyle={{
-        pin1: { marginBottom: 2 },
-      }}
+      schY={1}
       schPinArrangement={{
         rightSide: {
           pins: [1],
