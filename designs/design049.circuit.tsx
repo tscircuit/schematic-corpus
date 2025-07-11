@@ -34,7 +34,7 @@ export default () => (
       connection="U14.pin1"
       anchorSide="top"
       schX={1}
-      schY={-0.8}
+      schY={-0.9}
     />
     <netlabel net="ICM_PWR" connection="U14.pin2" anchorSide="left" schX={1} />
     <netlabel
@@ -42,14 +42,14 @@ export default () => (
       connection="C54.pin2"
       anchorSide="bottom"
       schX={2.5}
-      schY={1}
+      schY={0.6}
     />
     <netlabel
       net="GND"
       connection="C54.pin1"
       anchorSide="top"
       schX={2.5}
-      schY={-1.3}
+      schY={-0.9}
     />
   </board>
 )
