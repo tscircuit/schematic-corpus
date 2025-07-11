@@ -28,7 +28,12 @@ export default () => (
       schX={0.8}
       schY={-0.7}
     />
-    <netlabel net="QWIIC_PWR" connection="U4.pin2" anchorSide="left" schX={1.8} />
+    <netlabel
+      net="QWIIC_PWR"
+      connection="U4.pin2"
+      anchorSide="left"
+      schX={1.8}
+    />
     <netlabel
       net="GND"
       connection="R3.pin1"
