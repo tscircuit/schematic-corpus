@@ -14,7 +14,7 @@ const manualEdits = {
       selector: "D4",
       center: {
         x: 2.143603176289351,
-        y: -0.3371530106348991,
+        y: -0.4371530106348991,
       },
       relative_to: "group_center",
     },
@@ -40,10 +40,6 @@ export default () => (
   <board routingDisabled manualEdits={manualEdits}>
     <chip
       name="U1"
-      schPinStyle={{
-        pin1: { marginBottom: 0.1 },
-        pin2: { marginTop: 0.1 },
-      }}
       schPinArrangement={{
         rightSide: {
           pins: [1, 2],

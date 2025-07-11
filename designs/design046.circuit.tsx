@@ -23,11 +23,6 @@ export default () => (
           pins: [1, 2, 3, 4],
         },
       }}
-      schPinStyle={{
-        pin1: { marginBottom: 0.2 },
-        pin2: { marginBottom: 0.2 },
-        pin3: { marginBottom: 0.2 },
-      }}
     />
     <capacitor
       name="C17"

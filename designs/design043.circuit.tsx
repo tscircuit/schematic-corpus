@@ -6,7 +6,7 @@ const manualEdits = {
       selector: "C10",
       center: {
         x: 1.2177875563479656,
-        y: -0.14628574779098014,
+        y: -0.17471590255365455,
       },
       relative_to: "group_center",
     },
@@ -31,9 +31,7 @@ export default () => (
           pins: [1, 2],
         },
       }}
-      schPinStyle={{
-        pin1: { marginBottom: 0.6 },
-      }}
+      schY={0.28}
       connections={{ pin1: sel.C10.pin2 }}
     />
     <capacitor
