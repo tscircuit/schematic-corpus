@@ -26,7 +26,7 @@ export default () => (
         pin2: sel.U4.pin2,
       }}
       schRotation={90}
-      schX={2}
+      schX={1.7}
       schY={-0.8}
     />
     <netlabel
@@ -36,17 +36,12 @@ export default () => (
       schX={1}
       schY={-0.7}
     />
-    <netlabel
-      net="QWIIC_PWR"
-      connection="U4.pin2"
-      anchorSide="left"
-      schX={2.5}
-    />
+    <netlabel net="QWIIC_PWR" connection="U4.pin2" anchorSide="left" schX={2} />
     <netlabel
       net="GND"
       connection="R3.pin1"
       anchorSide="top"
-      schX={2}
+      schX={1.7}
       schY={-1.7}
     />
     <netlabel
