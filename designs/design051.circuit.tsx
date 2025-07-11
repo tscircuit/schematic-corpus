@@ -34,6 +34,7 @@ export default () => (
       name="C1"
       capacitance="100n"
       schRotation={90}
+      schY={0.2}
       schX={2}
       connections={{ pin2: sel.JP1.pin2 }}
     />
@@ -41,6 +42,7 @@ export default () => (
       name="C2"
       capacitance="100n"
       schRotation={90}
+      schY={0.2}
       schX={2.75}
       connections={{ pin2: sel.JP1.pin2 }}
     />
@@ -49,25 +51,26 @@ export default () => (
       capacitance="100n"
       schRotation={90}
       schX={3.5}
+      schY={0.2}
       connections={{ pin2: sel.JP1.pin2 }}
     />
     <netlabel
       schX={2}
-      schY={-1}
+      schY={-0.55}
       anchorSide="top"
       net="GND"
       connectsTo={sel.C1.pin1}
     />
     <netlabel
       schX={2.75}
-      schY={-1}
+      schY={-0.55}
       anchorSide="top"
       net="GND"
       connectsTo={sel.C2.pin1}
     />
     <netlabel
       schX={3.5}
-      schY={-1}
+      schY={-0.55}
       anchorSide="top"
       net="GND"
       connectsTo={sel.C3.pin1}
