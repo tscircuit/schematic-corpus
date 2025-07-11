@@ -47,11 +47,6 @@ export default () => (
           pins: [1, 2, 3],
         },
       }}
-      schPinStyle={{
-        pin1: { marginBottom: 0.1 },
-        pin2: { marginBottom: 0.1 },
-        pin3: { marginBottom: 0.1 },
-      }}
       connections={{ pin1: sel.C16.pin2 }}
     />
     <resistor

@@ -63,10 +63,6 @@ export default () => (
           direction: "top-to-bottom",
         },
       }}
-      schPinStyle={{
-        pin2: { marginBottom: 0.2 },
-        pin1: { marginBottom: 0.2 },
-      }}
     />
     <solderjumper
       name="JP1"

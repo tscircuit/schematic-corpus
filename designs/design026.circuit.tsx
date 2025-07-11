@@ -33,10 +33,6 @@ export default () => (
           direction: "bottom-to-top",
         },
       }}
-      schPinStyle={{
-        pin1: { marginTop: 0.1 },
-        pin2: { marginTop: 0.1 },
-      }}
     />
     <netlabel
       schX={3}
