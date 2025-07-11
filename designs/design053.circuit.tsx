@@ -11,8 +11,20 @@ export default () => (
         },
       }}
     />
-    <netlabel schX={1} schY={-1} anchorSide="top" net="GND" connection="U1.pin1" />
-    <netlabel schX={1} schY={1} net="VCC" anchorSide="bottom" connection="U1.pin2"/>
+    <netlabel
+      schX={1}
+      schY={-1}
+      anchorSide="top"
+      net="GND"
+      connection="U1.pin1"
+    />
+    <netlabel
+      schX={1}
+      schY={1}
+      net="VCC"
+      anchorSide="bottom"
+      connection="U1.pin2"
+    />
     <netlabel
       schX={1.5}
       schY={0.5}
