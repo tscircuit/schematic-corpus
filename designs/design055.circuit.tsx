@@ -4,14 +4,6 @@ export default () => (
   <board routingDisabled>
     <chip
       name="U1"
-      schPinStyle={{
-        pin1: {
-          marginBottom: 0.2,
-        },
-        pin2: {
-          marginBottom: 0.2,
-        },
-      }}
       schPinArrangement={{
         rightSide: {
           pins: [1, 2, 3],
@@ -36,7 +28,7 @@ export default () => (
       name="R1"
       schRotation="90deg"
       schX={1.8}
-      schY={-0.15}
+      schY={-0.35}
       resistance="2k"
       connections={{ pin2: sel.U1.pin1 }}
     />
@@ -45,11 +37,11 @@ export default () => (
       capacitance="4.7uF"
       schRotation={90}
       schX={3.2}
-      schY={-0.15}
+      schY={-0.35}
       connections={{ pin2: sel.R1.pin2 }}
     />
     <netlabel
-      schX={2.1}
+      schX={1.8}
       schY={-1.8}
       anchorSide="left"
       net="VREG_EN"
