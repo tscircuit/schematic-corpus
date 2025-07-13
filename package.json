@@ -8,7 +8,7 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "bpc-graph": "^0.0.60",
-    "bun-match-svg": "^0.0.11",
+    "bun-match-svg": "^0.0.12",
     "circuit-json-to-bpc": "^0.0.6",
     "graphics-debug": "^0.0.60",
     "make-vfs": "^1.0.16",
