@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" style="background-color: rgb(245, 241, 237)" data-real-to-screen-transform="matrix(165.7641728368,0,0,-165.7641728368,409.8201486352,277.1355950934)" data-software-used-string="@tscircuit/core@0.0.555"><style>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" style="background-color: rgb(245, 241, 237)" data-real-to-screen-transform="matrix(165.7641728368,0,0,-165.7641728368,409.8201486352,277.1355950934)" data-software-used-string="@tscircuit/core@0.0.562"><style>
               .boundary { fill: rgb(245, 241, 237); }
               .schematic-boundary { fill: none; stroke: #fff; }
               .component { fill: none; stroke: rgb(132, 0, 0); }
