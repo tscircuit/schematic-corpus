@@ -52,6 +52,56 @@
             border: 1px solid #eee;
             border-radius: 4px;
         }
+
+        .btn {
+  color: #25292e;
+  background-color: #ebf0f4;
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  background-image: linear-gradient(180deg, #f6f8fa 0%, #ebf0f4 90%);
+  user-select: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #d1d9e0;
+  border-color: #a3b0c0;
+}
+
+.btn:active {
+  background-color: #c1cad8;
+  border-color: #7f8fa4;
+}
+        /* Hide the left/right buttons on small screens, show burger button */
+@media (max-width: 640px) {
+  .left-btn, .right-btn {
+    display: none;
+  }
+  .burger-btn {
+    display: inline-block;
+  }
+}
+
+/* Burger menu container styles */
+.burger-menu {
+  position: absolute;
+  top: 60px; /* adjust as needed */
+  left: 20px;
+  right: 20px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
     </style>
 </head>
 <body>

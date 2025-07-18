@@ -17,12 +17,12 @@
     "tscircuit": "^0.0.546",
     "tsdown": "^0.12.9"
   },
-  "files": [
-    "dist"
-  ],
   "peerDependencies": {
     "typescript": "^5"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "tsci dev",
     "vercel-build": "bun run build && bun run build:site",
@@ -35,6 +35,5 @@
     "format": "biome format --write .",
     "format:check": "biome format ."
   },
-  "type": "module",
-  "dependencies": {}
+  "type": "module"
 }
