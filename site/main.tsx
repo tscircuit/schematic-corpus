@@ -106,9 +106,7 @@ function GitHubStarButton({
       })
       .catch(() => setStars(null))
 
-    setLogoUrl(
-      "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    )
+    setLogoUrl("https://cdn.simpleicons.org/github")
   }, [repo])
 
   return (
@@ -209,7 +207,7 @@ function Gallery() {
         style={{
           display: "flex",
           alignItems: "center",
-          justifyContent: isMobile ? "space-between" : "center",
+          justifyContent: "center",
           gap: isMobile ? undefined : "12.6vw",
           padding: "0 20px",
           position: "relative",
@@ -222,13 +220,16 @@ function Gallery() {
             aria-label="Toggle menu"
             onClick={toggleMenu}
             style={{
+              position: "absolute",
+              right: 0,
+              top: "50%",
+              transform: "translateY(-50%)",
               fontSize: 28,
               background: "none",
               border: "none",
               cursor: "pointer",
               padding: 8,
               userSelect: "none",
-              flex: "0 0 auto",
             }}
           >
             ☰
