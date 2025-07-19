@@ -69,7 +69,7 @@ export default () => (
 
     <netlabel
       schX={4.5}
-      schY={-1.4}
+      schY={-0.4}
       net="GND"
       anchorSide="top"
       connectsTo={sel.JP4.pin2}
@@ -90,7 +90,7 @@ export default () => (
     />
     <netlabel
       schX={0.9}
-      schY={-1.4}
+      schY={-0.5}
       net="GND"
       anchorSide="top"
       connectsTo={sel.U1.pin3}
