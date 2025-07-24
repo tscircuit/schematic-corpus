@@ -11,7 +11,6 @@ export default () => (
         },
       }}
     />
-
     <capacitor
       name="C2"
       capacitance="10nf"
