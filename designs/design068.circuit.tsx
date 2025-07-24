@@ -11,6 +11,7 @@ export default () => (
         pin2: sel.R20.pin2,
       }}
     />
+
     <resistor
       name="R20"
       resistance="3.3k"
