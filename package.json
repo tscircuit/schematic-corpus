@@ -1,6 +1,6 @@
 {
   "name": "@tscircuit/schematic-corpus",
-  "version": "0.0.91",
+  "version": "0.0.92",
   "main": "./dist/index.js",
   "devDependencies": {
     "@biomejs/biome": "^2.0.0",
