@@ -1,4 +1,4 @@
-import { sel } from "tscircuit";
+import { sel } from "tscircuit"
 export default () => (
   <board width="10mm" height="10mm">
     <chip
@@ -56,4 +56,4 @@ export default () => (
       schY={-0.5}
     />
   </board>
-);
+)
