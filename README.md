@@ -2,6 +2,8 @@
 
 A corpus of schematic layouts made with [tscircuit](https://github.com/tscircuit/tscircuit).
 
+[View Corpus](https://schematic-corpus.tscircuit.com/)
+
 ![](./designs/__snapshots__/design001.circuit-schematic.snap.svg)
 
 ## Building / Automatic Expansion
