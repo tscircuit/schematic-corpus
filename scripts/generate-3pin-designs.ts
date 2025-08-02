@@ -8,7 +8,6 @@ import {
   trace,
 } from "lib/codegen/codegen-primitives"
 import { pack } from "calculate-packing"
-import { runTscircuitCode } from "tscircuit"
 import { selectSchematicWithFewestCrossings } from "lib/codegen/selectSchematicWithFewestCrossings"
 
 async function main() {
@@ -166,7 +165,7 @@ async function main() {
       idx++
     }
   }
-  console.log(`Generated ${idx} designs into ${outDir}`)
+  console.log(`Generated ${idx - 1} designs into ${outDir}`)
 }
 
 await main().catch(console.error)

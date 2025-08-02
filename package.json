@@ -9,7 +9,7 @@
     "@types/react-dom": "^19.1.6",
     "bpc-graph": "^0.0.65",
     "bun-match-svg": "^0.0.12",
-    "calculate-packing": "^0.0.9",
+    "calculate-packing": "^0.0.10",
     "circuit-json-to-bpc": "^0.0.13",
     "graphics-debug": "^0.0.61",
     "make-vfs": "^1.0.16",

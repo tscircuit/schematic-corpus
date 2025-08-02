@@ -19,7 +19,6 @@ export const selectSchematicWithFewestCrossings = async (
         crossings += elm.edges.filter((e) => e.is_crossing).length
       }
     }
-
     if (crossings < lowestCrossings) {
       lowestCrossings = crossings
       bestCircuitIndex = i
