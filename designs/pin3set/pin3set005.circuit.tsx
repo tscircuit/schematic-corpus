@@ -8,10 +8,13 @@ export default () => (
           pins: [1,2,3],
         },
       }}
+      schX={0}
+      schY={0}
+      schRotation={0}
       connections={{}}
     />
-<resistor name="R1" resistance="1k" schX={0} schY={0} schRotation={0} connections={{}} />
-<capacitor name="C1" capacitance="100nF" schX={0} schY={0} schRotation={0} connections={{}} />
+<resistor name="R1" resistance="1k" schX={1.4749999999999999} schY={0.32499999999999996} schRotation={0} connections={{}} />
+<capacitor name="C1" capacitance="100nF" schX={1.4749999999999999} schY={-0.5249999999999999} schRotation={0} connections={{}} />
 <trace from="R1.pin1" to="U1.pin3" />
 <trace from="R1.pin2" to="net.VCC" />
 <trace from="C1.pin1" to="U1.pin1" />

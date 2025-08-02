@@ -21,36 +21,53 @@ async function main() {
     for (const cPin of pins) {
       if (cPin === rPin) continue // R1 & C1 can’t share the same pin
 
-      pack({
+      const packOutput = pack({
         components: [
           {
             componentId: "U1",
-            pads: pins.map((p) => ({
-              networkId: `net_U1.pin${p}`,
-              offset: { x: 0, y: 0.2 * p },
-              padId: `pad_U1.pin${p}`,
-              size: {
-                x: 0.15,
-                y: 0.15,
-              },
-              type: "rect",
-            })),
+            pads: pins
+              .map((p) => ({
+                networkId: `net_U1.pin${p}`,
+                offset: { x: 0.5, y: 0.2 * p - 0.2 },
+                padId: `pad_U1.pin${p}`,
+                size: {
+                  x: 0.15,
+                  y: 0.15,
+                },
+                type: "rect",
+              }))
+              .concat([
+                {
+                  networkId: "net_U1.KEEPOUT",
+                  offset: { x: 0, y: 0 },
+                  padId: "pad_U1.KEEPOUT",
+                  size: { x: 0.3, y: 2 },
+                  type: "rect",
+                },
+              ]),
           },
           {
             componentId: "R1",
             pads: [
               {
-                networkId: "net_R1.pin1",
-                offset: { x: -0.5, y: 0 },
+                networkId: `net_U1.pin${rPin}`,
+                offset: { x: -0.3, y: 0 },
                 padId: "pad_R1.pin1",
                 size: { x: 0.15, y: 0.15 },
                 type: "rect",
               },
               {
                 networkId: "net_R1.pin2",
-                offset: { x: 0.5, y: 0 },
+                offset: { x: 0.3, y: 0 },
                 padId: "pad_R1.pin2",
                 size: { x: 0.15, y: 0.15 },
+                type: "rect",
+              },
+              {
+                networkId: "net_R1.KEEPOUT",
+                offset: { x: 0, y: 0 },
+                padId: "pad_R1.KEEPOUT",
+                size: { x: 1, y: 0.5 },
                 type: "rect",
               },
             ],
@@ -59,17 +76,24 @@ async function main() {
             componentId: "C1",
             pads: [
               {
-                networkId: "net_C1.pin1",
-                offset: { x: -0.5, y: 0.2 },
+                networkId: `net_U1.pin${cPin}`,
+                offset: { x: -0.3, y: 0 },
                 padId: "pad_C1.pin1",
-                size: { x: 0.15, y: 0.15 },
+                size: { x: 0.25, y: 0.25 },
                 type: "rect",
               },
               {
                 networkId: "net_C1.pin2",
-                offset: { x: 0.5, y: 0.2 },
+                offset: { x: 0.3, y: 0 },
                 padId: "pad_C1.pin2",
-                size: { x: 0.15, y: 0.15 },
+                size: { x: 0.25, y: 0.25 },
+                type: "rect",
+              },
+              {
+                networkId: "net_C1.KEEPOUT",
+                offset: { x: 0, y: 0 },
+                padId: "pad_C1.KEEPOUT",
+                size: { x: 1, y: 0.5 },
                 type: "rect",
               },
             ],
@@ -80,10 +104,38 @@ async function main() {
         packPlacementStrategy: "shortest_connection_along_outline",
       })
 
+      const packPlacements: Record<
+        string,
+        { x: number; y: number; ccwRotationDegrees: number }
+      > = {}
+      for (const c of packOutput.components) {
+        packPlacements[c.componentId] = {
+          x: c.center.x,
+          y: c.center.y,
+          ccwRotationDegrees: (c.ccwRotationOffset / Math.PI) * 180,
+        }
+      }
+
       const circuit = makeCircuit([
-        u1Chip({ pinCount: 3, connections: {} }),
-        resistor({ name: "R1" }),
-        capacitor({ name: "C1" }),
+        u1Chip({
+          pinCount: 3,
+          connections: {},
+          schX: packPlacements["U1"]?.x,
+          schY: packPlacements["U1"]?.y,
+          schRotation: packPlacements["U1"]?.ccwRotationDegrees,
+        }),
+        resistor({
+          name: "R1",
+          schX: packPlacements["R1"]?.x,
+          schY: packPlacements["R1"]?.y,
+          schRotation: packPlacements["R1"]?.ccwRotationDegrees,
+        }),
+        capacitor({
+          name: "C1",
+          schX: packPlacements["C1"]?.x,
+          schY: packPlacements["C1"]?.y,
+          schRotation: packPlacements["C1"]?.ccwRotationDegrees,
+        }),
         trace({ from: "R1.pin1", to: `U1.pin${rPin}` }),
         trace({ from: "R1.pin2", to: "net.VCC" }),
         trace({ from: "C1.pin1", to: `U1.pin${cPin}` }),

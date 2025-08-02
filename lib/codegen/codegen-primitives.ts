@@ -4,6 +4,9 @@ export const range = (end: number) =>
 export const u1Chip = (props: {
   pinCount: number
   connections: Record<string, string>
+  schX?: number
+  schY?: number
+  schRotation?: number
 }) =>
   `<chip
       name="U1"
@@ -13,6 +16,9 @@ export const u1Chip = (props: {
           pins: ${JSON.stringify(range(props.pinCount))},
         },
       }}
+      schX={${props.schX ?? 0}}
+      schY={${props.schY ?? 0}}
+      schRotation={${props.schRotation ?? 0}}
       connections={${JSON.stringify(props.connections)}}
     />`
 
