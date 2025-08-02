@@ -9,6 +9,7 @@
     "@types/react-dom": "^19.1.6",
     "bpc-graph": "^0.0.65",
     "bun-match-svg": "^0.0.12",
+    "calculate-packing": "^0.0.9",
     "circuit-json-to-bpc": "^0.0.13",
     "graphics-debug": "^0.0.61",
     "make-vfs": "^1.0.16",
@@ -33,7 +34,8 @@
     "snapshot": "tsci snapshot --schematic-only",
     "snapshot:update": "tsci snapshot --update --schematic-only",
     "format": "biome format --write .",
-    "format:check": "biome format ."
+    "format:check": "biome format .",
+    "generate:pin3": "bun scripts/generate-3pin-designs.ts"
   },
   "type": "module"
 }
