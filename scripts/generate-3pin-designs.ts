@@ -34,7 +34,7 @@ async function main() {
                   x: 0.15,
                   y: 0.15,
                 },
-                type: "rect",
+                type: "rect" as const,
               }))
               .concat([
                 {
