@@ -4,9 +4,11 @@
   "main": "./dist/index.js",
   "devDependencies": {
     "@biomejs/biome": "^2.0.0",
+    "@tscircuit/alphabet": "^0.0.27",
+    "@tscircuit/cli": "0.1.189",
     "@types/bun": "^1.2.18",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
     "bpc-graph": "^0.0.65",
     "bun-match-svg": "^0.0.12",
     "calculate-packing": "^0.0.10",
@@ -17,6 +19,9 @@
     "react-dom": "^19.1.0",
     "tscircuit": "^0.0.568",
     "tsdown": "^0.12.9"
+  },
+  "overrides": {
+    "@tscircuit/cli": "0.1.189"
   },
   "peerDependencies": {
     "typescript": "^5"
