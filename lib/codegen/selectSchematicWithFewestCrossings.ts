@@ -3,6 +3,12 @@ import { runTscircuitCode } from "tscircuit"
 export const selectSchematicWithFewestCrossings = async (
   circuitCodes: string[],
 ): Promise<{ bestCircuitIndex: number; bestCircuitCode: string }> => {
+  if (circuitCodes.length === 0) {
+    throw new Error(
+      "selectSchematicWithFewestCrossings requires at least one circuit",
+    )
+  }
+
   const circuitJsons = []
   for (const circuitCode of circuitCodes) {
     const circuitJson = await runTscircuitCode(circuitCode)
